@@ -1,4 +1,11 @@
 package life.league.challenge.kotlin.data.response
 
-class PostResponse {
-}
+import com.squareup.moshi.JsonClass
+
+@JsonClass(generateAdapter = true)
+data class PostResponse(
+    val userId: Int,
+    val id: Int,
+    val title: String?,
+    val body: String?
+)
